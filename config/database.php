@@ -55,13 +55,19 @@ return [
             'engine' => null,
         ],
 
-        'mysql2' => [
-                'driver'    => env('DB_CONNECTION_SECOND'),
-                'host'      => env('DB_HOST_SECOND'),
-                'port'      => env('DB_PORT_SECOND'),
-                'database'  => env('DB_DATABASE_SECOND'),
-                'username'  => env('DB_USERNAME_SECOND'),
-                'password'  => env('DB_PASSWORD_SECOND'),
+        'formulario' => [
+                'driver'    => 'mysql',
+                'host'      => env('FORMULARIO_HOST','127.0.0.1'),
+                'port'      => env('FORMULARIO_PORT','3306'),
+                'database'  => env('FORMULARIO_DATABASE','forge'),
+                'username'  => env('FORMULARIO_USERNAME','forge'),
+                'password'  => env('FORMULARIO_PASSWORD',''),
+                'charset' => 'utf8mb4',
+                'collation' => 'utf8mb4_unicode_ci',
+                'prefix' => '',
+                'prefix_indexes' => true,
+                'strict' => true,
+                'engine' => null,
         ],
 
         'pgsql' => [
